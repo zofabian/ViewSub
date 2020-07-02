@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         amounttxt = (TextView) findViewById(R.id.amounttxt);
         amount = (TextView) findViewById(R.id.amount);
 
-        paydate.setText("-");
         amount.setText("-");
 
         spotifybtn.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
         paydate.setText(date);
         charge = intent.getStringExtra("charge");
         amount.setText(charge);
+
+        if(intent.getStringExtra("date")==null) {
+            paydate.setText("-");
+        }
+        if(intent.getStringExtra("charge")==null){
+            amount.setText("-");
+        }
+
 
 
     }
