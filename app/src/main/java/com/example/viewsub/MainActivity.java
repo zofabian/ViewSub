@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        }
         Intent intent = getIntent();
         date = intent.getStringExtra("date");
         paydate.setText(date);
