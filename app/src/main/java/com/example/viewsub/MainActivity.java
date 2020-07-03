@@ -11,10 +11,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView spotifyimg;
-    TextView spotifytxt, paydatetxt, amounttxt, paydate, amount;
-    Button spotifybtn;
-    ScrollView scroll;
+    ImageView spotifyimg, psnimg, netfliximg, adobeimg;
+    TextView spotifytxt, psntxt, netflixtxt, adobetxt, paydatetxt, amounttxt, paydate, amount;
+    Button spotifybtn, psnbtn, netflixbtn, adobebtn;
     String date, charge;
 
     @Override
@@ -23,8 +22,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         spotifyimg = (ImageView) findViewById(R.id.spotifyimg);
+        psnimg = (ImageView) findViewById(R.id.spotifyimg);
+        netfliximg = (ImageView) findViewById(R.id.psnimg);
+        adobeimg = (ImageView) findViewById(R.id.adobeimg);
         spotifytxt = (TextView) findViewById(R.id.spotifytxt);
+        psntxt = (TextView) findViewById(R.id.psntxt);
+        netflixtxt = (TextView) findViewById(R.id.netflixtxt);
+        adobetxt= (TextView) findViewById(R.id.adobetxt);
         spotifybtn = (Button) findViewById(R.id.spotifybtn);
+        psnbtn = (Button) findViewById(R.id.psnbtn);
+        netflixbtn = (Button) findViewById(R.id.netflixbtn);
+        adobebtn = (Button) findViewById(R.id.adobebtn);
         paydatetxt = (TextView) findViewById(R.id.paydatetxt);
         paydate = (TextView) findViewById(R.id.paydate);
         amounttxt = (TextView) findViewById(R.id.amounttxt);
