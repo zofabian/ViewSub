@@ -1,7 +1,9 @@
 package com.example.viewsub;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -47,14 +49,25 @@ public class AddActivity extends AppCompatActivity {
         addbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(date.getText()!= null || charge.getText()!=null) {
+                if(date.getText().toString()!= "" || charge.getText().toString()!="") {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(AddActivity.this);
+                    alert.setCancelable(false);
+                    alert.setTitle("Missing Information");
+                    alert.setMessage("Please add the missing Information");
+
+                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.cancel();
+                        }
+                    });
+                    alert.show();
+                }
+                else{
                     Intent MainActivity = new Intent(getApplicationContext(), MainActivity.class);
                     MainActivity.putExtra("date", date.getText().toString());
                     MainActivity.putExtra("charge", charge.getText().toString());
                     startActivity(MainActivity);
-                }
-                else{
-
                 }
             }
         });
