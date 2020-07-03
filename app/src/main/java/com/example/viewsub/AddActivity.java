@@ -49,7 +49,7 @@ public class AddActivity extends AppCompatActivity {
         addbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(date.getText().toString()!= "" || charge.getText().toString()!="") {
+                /*if(date.getText().toString()!= "" || charge.getText().toString()!="") {
                     AlertDialog.Builder alert = new AlertDialog.Builder(AddActivity.this);
                     alert.setCancelable(false);
                     alert.setTitle("Missing Information");
@@ -62,13 +62,13 @@ public class AddActivity extends AppCompatActivity {
                         }
                     });
                     alert.show();
-                }
-                else{
+                }*/
+                /*else{*/
                     Intent MainActivity = new Intent(getApplicationContext(), MainActivity.class);
                     MainActivity.putExtra("date", date.getText().toString());
                     MainActivity.putExtra("charge", charge.getText().toString());
                     startActivity(MainActivity);
-                }
+                /*}*/
             }
         });
     }
