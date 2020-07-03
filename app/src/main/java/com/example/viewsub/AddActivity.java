@@ -15,7 +15,6 @@ public class AddActivity extends AppCompatActivity {
 
     TextView datetxt, chargetxt, nametxt;
     EditText date, charge;
-    ImageView iconimg,icontransfer;
     ImageButton cancelbtn;
     Button addbtn;
     String name;
@@ -28,7 +27,6 @@ public class AddActivity extends AppCompatActivity {
         cancelbtn = (ImageButton) findViewById(R.id.cancelbtn);
         addbtn = (Button) findViewById(R.id.addbtn);
         nametxt = (TextView) findViewById(R.id.nametxt);
-        iconimg = (ImageView) findViewById(R.id.iconimg);
         datetxt = (TextView) findViewById(R.id.datetxt2);
         date = (EditText) findViewById(R.id.date);
         chargetxt = (TextView) findViewById(R.id.chargetxt);
@@ -49,10 +47,15 @@ public class AddActivity extends AppCompatActivity {
         addbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent MainActivity =  new Intent(getApplicationContext(), MainActivity.class);
-                MainActivity.putExtra("date", date.getText().toString());
-                MainActivity.putExtra("charge", charge.getText().toString());
-                startActivity(MainActivity);
+                if(date.getText()!= null || charge.getText()!=null) {
+                    Intent MainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                    MainActivity.putExtra("date", date.getText().toString());
+                    MainActivity.putExtra("charge", charge.getText().toString());
+                    startActivity(MainActivity);
+                }
+                else{
+
+                }
             }
         });
     }

@@ -26,12 +26,11 @@
         android:layout_width="190dp"
         android:layout_height="35dp"
         android:fontFamily="monospace"
-        android:text="Payment Date"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.494" />
@@ -76,14 +75,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.97" />
-
-    <ImageView
-        android:id="@+id/iconimg"
-        android:layout_width="91dp"
-        android:layout_height="94dp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="103dp"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <ImageButton
         android:id="@+id/cancelbtn"
